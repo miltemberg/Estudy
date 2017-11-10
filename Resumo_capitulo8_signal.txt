@@ -1,0 +1,82 @@
+
+para qualidade de sinal ideal o designer das internoçoes deve manter a uma impedancia instatanea constante
+ai a importancia de projetos com impedancias controladas
+por mais eficiente q seja a linha de transmissao a impedancia sempre varia nas extremidades
+da linha a menos q seja controlado ai entra a estrategia de termino
+e mesmo tendo uma impedancia controlada e bem finalizada a topologia de rotiamento pode influenciar reflexoes
+quando uma linha de sinal se divide a uma descontinuidade de impedancia uma topologia sem ramos é o ideal
+
+
+
+
+a medida que o sinal passa na linha de trans missao ele ve uma impedancia instatanea ao logo do caminho
+se for uma impedancia controlada a impedancia intantanea sera igual a impedancia caractereistica de linha
+se houver mudança da impedancia instatanea ira gerar um sinal de reflexao oposto, iso distorce o sinal
+qnto maior for a diferança nas regioes das impedancias maior sera a o sinal rafletido.
+o coeficiente de reflexao descreve a fraçao do sinal que reflete
+
+
+
+para minimizar os problemas de integridade em um bomdesign de placa decircuitos de alta velocidade
+deve ter:
+interconeçoes com impedancia controlada
+pelo menos uma terminaçao nas linhas de transmissao 
+uma topologia que minimize o impacto de ramos
+minimizar qualquer descontinuedade geometrica
+
+
+o sinal refletido é gerado porq,quando a uma alteraçao de imperancia isso torna a corrente e tensao imcompativeis 
+por isso uma tensao oposta ao sinal incidente retorna para a fonte do sinal para menter harmonia no sinal
+ 
+
+
+terminaçao
+se ao fim de uma linha de transmissao nao houver uma impedancia ou um dispositivo com impedancoa escifica
+ou seja for um linha de transmissao sem terminaçao a impedancia instantanea no fima sera infinita 
+com isso o coeficiente de reflexao sera 1 , gerando uma tensao oposto voltado para fonte com mesmo intensidade
+se a segundo impedancia , for maior q a primeira a tensao de refexao sera negativa
+
+
+
+resistencia da fonte
+calcular a resistencia equivalente 
+
+diagrama de reflexao
+todas as reflexoes mostrando qeu uma fonte de tensao 1v pode ter um pico de 1,8v
+
+
+
+mesmo se um placa de cicuito é projetado com interconecxoes de impedancia controlada ainda ha a chance de
+um sina indentificar uma diferença de impedancia nas seguintes caracteristicas:
+extremidades da linha 
+canto 
+ramificaçao
+uma via entre as camadas de sina
+pad de teste
+
+
+tecnicas de terminaçao de um topologia ponto a ponto 
+o metodo mais comum é utilizar uma resistencia em seria para o driver chamado de rescesao serie fonte 
+a soma da impedancia do driver e a resistencia de terminaçao deve ser igual a impedancia caracteristica da linha
+
+tempo de subdida
+um circuito de linha de transmissao simples tem um condutor numa extremidade, um comprimetno curto e um receptor 
+no outro extremo, quando o comprimento da linha de transmissao é muito grande pode alterar o sinal de envio 
+isso pode calsar praoblemas, a propagaçao de um sinal deve chegar o quanto antes no final da linha, pois quanto maior
+for o seu tempo de subida maior sera a distorçao no sinal.com uma estimativa aproximada se o tempo de propagaçao do sinal for 
+menor que 20% do tempo de subida as reflexoes seram
+
+figura8-6
+
+a respeito de linhas de transmissao nao terminadas ou seja nao chegou a uma carga antes de atingir seu pico de subida, o comprimento desta linha deve 
+ser de no maximo 20% do seu tempo de subida para que nao se tenha preocupacoes a respeito de reflexoes.com os avanços de tecnologia , a propagaçao de[
+sinais em uma placa hoje sem bem mais rapidos que antigamente co tempos de subida tao curtos quanto 0.1nS, entao o comprimento de uma linha se torna cada vez 
+mais importante para que nao alcance o ruido.
+
+
+ler topico 8.10
+
+
+
+
+
