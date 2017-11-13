@@ -55,10 +55,6 @@ uma via entre as camadas de sina
 pad de teste
 
 
-tecnicas de terminaçao de um topologia ponto a ponto 
-o metodo mais comum é utilizar uma resistencia em seria para o driver chamado de rescesao serie fonte 
-a soma da impedancia do driver e a resistencia de terminaçao deve ser igual a impedancia caracteristica da linha
-
 tempo de subdida
 um circuito de linha de transmissao simples tem um condutor numa extremidade, um comprimetno curto e um receptor 
 no outro extremo, quando o comprimento da linha de transmissao é muito grande pode alterar o sinal de envio 
@@ -74,7 +70,65 @@ sinais em uma placa hoje sem bem mais rapidos que antigamente co tempos de subid
 mais importante para que nao alcance o ruido.
 
 
-ler topico 8.10
+tecnicas de terminaçao de um topologia ponto a ponto 
+existem quatro tecnicas para encerrar uma topologia ponoto a ponto , metodo mais comum é utilizar uma resistencia em seria para o driver chamado de soucer-series terination 
+a soma da impedancia do driver e a resistencia de terminaçao deve ser igual a impedancia caracteristica da linha.
+para que fiquem equilibrados.
+
+
+reflexoes em linhas curtas de transmiaao
+
+ha tres caracteristicas que determinam um impacto ou ruidos causados em uma linha de transmissao curta
+o atraso da descontinuidade, a impedancia caracteristica da descontinuidade e o quando tempo de atraso
+é longo quando comparado ao tempo de subida.o valor maximo para se relacionar ao coeficiente de reflexao
+é determicado pela diferença entre as impedancia divido prla soma entre elas.
+
+formula
+ por isso é tao importante projetar uma placa com interconexoes com impedancias caracteristicas uniforme, para que se tennha um ruido de reflexao 
+menor que 5% no balanço da tensao, a descontinuidade maxima para um impedancia caracteristica deve ser de no maximo 10%.
+
+
+
+reflexaoes em ponta curtos
+
+Muitas vezes, um ramo é adicionado a uma linha de transmissão uniforme para permitir que o sinal atinja múltiplos pontos,quando o ramo é curto, ele é chamado de ponta. 
+Uma ponta é comumente encontrado em dsipositivos BGA ,na fabricaçao os bus sao quebrados deixando pequenas pontas curtas ligado a cada linha de transmissao. Para se anlisar 
+o impactos dessas pontas em um sinal deve se levar em consideraçao o tempo de subida do sinal e o comprimento da ponta. com isso pode se concluir que 
+a regra pratica é se o comprimento da stub(ponta) é mantido menor do que 20 % a extensao espacial do tempo de subida o impacto desta ponta para o sinal pode nao se relevante 
+da mesma forma se a ponta for maior que 20%(medido em polegadas) do tempo(nseg) de subida ele pode afetar o sinal. geralmente os dispositivos BGA vem com umas pontas de 0,25 poelgadas
+ou seja se o tempo de subida de um signal for maior que 0,25 nseg essa ponta nao ira afetar o sinal.
+
+
+reflexoes capacitivas 
+
+quando uma linha de transimissa tem no seu final um capacitor idel , se tem uma impedancia instantania o seu coeficiente de reflexao ira variar com o tempo , afinal a impedancia de um capacitor
+esta relacionado ao dominio do tempo.
+
+formula
+
+uma caraga capacitiva no meio de um roteamento
+uma pad de ensaio, uma via , ou ate um ramo cruto ligado no meio de uma roteamento ira agir cmoo um capacitor 
+o sinal transmitido iniciamente pode nao experimentar uma grande impaco sobre a prieira passagem , mas depois que o sinal reflete no final da linha de transmissao ele vai voltar para a fonte, esta reflexao 
+de volta para o receptor tera uma voltagem negativa e vai puxar o sinal recebido para baixo causando undershoot.
+a influencia de um capacitor ideal no meio de linha de transmissao  depende do tempo de subida do sinal e o tamanho da capacitancia.
+
+efeitos de cantos e vias 
+caso uma interconexao uniforme tenha uma curvatura de 90 graus havera uma mudança de impedancia e alguma reflexao e distorçao do sinal 
+figura 8-27
+
+reduzindo essa angulaçao para 45 graus ao inves de 90 vai melhorar bastante com relaçao na qualidade do sinal ,e efetuar uma cruva arredondada de largura constante ira reduzir ainda mais o impaco de um canto 
+uma curva de 90 grausnao ira afetar a transissao dos eletrons o que ira pesar , sera a largura estrxa da linha na curva que age como uma descontinuidade capacitva que ira trazer distorçao
+
+as vias em uma linha de transmissao iram gerar uma capacitanca residual de 0,1pF para mais de 1 pF vias tocando em uma linhas ira ver coo uma descontinuidade capacitiva em uma conexao seirla por exemplo
+ira limitar bastante q quaidade do sinal
+
+uma linhda de transmissao com uma distribuiçao com cargas capacitivas uniformemente espaçadas é chaamda de linha carregada
+figura 8-32
+
+
+ 
+
+
 
 
 
